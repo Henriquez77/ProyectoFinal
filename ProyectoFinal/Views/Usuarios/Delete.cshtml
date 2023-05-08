@@ -1,0 +1,53 @@
+﻿@model ProyectoFinal.Models.Usuario
+
+@{
+    ViewData["Title"] = "Eliminar usuario";
+}
+
+<div class="container">
+    <h1>Eliminar usuario</h1>
+
+
+    <br />
+    <h3>¿Estas seguro que deseas eliminar este rol?</h3>
+    <br />
+<div>
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt class = "col-sm-2">
+                @Html.DisplayName("Contraseña")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Contrasenia)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Rol)
+        </dt>
+        <dd class = "col-sm-10">
+                @{
+                    if (Model.RolId == 1)
+                    {
+                        @Html.DisplayName("Administrador")
+                    }
+
+                    else
+                    {
+                        @Html.DisplayName("Cliente")
+                    }
+            }
+            @*@Html.DisplayFor(model => model.Rol.RolId)*@
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="UsuarioId" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+            <a asp-action="Index" class="btn btn-success">Volver</a>
+    </form>
+</div>
+</div>

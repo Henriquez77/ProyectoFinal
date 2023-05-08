@@ -1,0 +1,29 @@
+﻿@model ProyectoFinal.Models.Usuario
+@{
+    
+    Layout = "_LayoutLogin";
+    
+    ViewData["Title"] = "Registrar usuario";
+}
+<main class="form-signin w-100 m-auto">
+    <form asp-action="Registrar" method="post">
+        <img class="mb-4" src="~/imgs/icoLogin.png"
+             alt="" width="72" height="57">
+        <h1 class="h3 mb-3 fw-normal">Registrar usuario</h1>
+        <div class="form-floating">
+            <input type="text" asp-for="Nombre" class="form-control" id="floatingInput"
+                   placeholder="Usuario" required>
+            <label asp-for="Nombre">Usuario</label>
+        </div>
+        <br />
+        <div class="form-floating">
+            <input type="password" class="form-control" asp-for="Contrasenia"
+                   id="floatingPassword" placeholder="Contraseña" required>
+            <label for="floatingPassword" asp-for="Contrasenia">Contraseña</label>
+        </div>
+        <br />
+        <p><a asp-action="Index" class="link-underline-light">Iniciar sesion</a></p>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Registrar</button>
+        <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2023</p>
+    </form>
+</main>
