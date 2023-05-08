@@ -15,15 +15,16 @@
 **En caso de que se completen satisfactoriamente todos los modulos prioritarios y se cumpla con los objetivos principales del proyecto, se podría evaluar la posibilidad de incluir funcionalidades adicionales en el sistema como por ejemplo un modulo para que clientes puedan realizar compras en lineas**
 
 <br/>
-    <h1 style="text-center">Codigo base de datos<h1/>
-<br/>
-```sql
+    <h1>Codigo base de datos<h1/>
+
+	
+```SQL
 Create database Inventario;
 go
-
+	
 Use Inventario;
 go
-
+	
 Create table Roles(
 	RolId int identity primary key NOT NULL,
 	Nombre varchar(50) NOT NULL
@@ -81,4 +82,7 @@ Create table Compras(
 	Foreign key (ProveedorId) references Proveedores(ProveedorId)
 );
 go
+```
+
+
 
