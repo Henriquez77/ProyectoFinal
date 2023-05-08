@@ -1,0 +1,32 @@
+.vs/
+# Ignorar archivos de compilación
+bin/
+obj/
+
+# Ignorar paquetes de NuGet restaurados
+packages/
+
+# Ignorar módulos de Node.js
+node_modules/
+
+# Ignorar archivos de solución
+*.suo
+*.user
+*.sln.docstates
+
+# Ignorar archivos de caché y de respaldo
+[Tt]humbs.db
+*.DS_Store
+*.dotCover
+*.resharper
+*.ReSharper
+
+# Ignorar archivos de registro y temporales
+*.log
+*.vspscc
+*.vssscc
+*.pssproj
+*.usertype.dat
+*.bak
+*.cache
+*.tmp
